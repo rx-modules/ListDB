@@ -24,5 +24,6 @@ function rx.lisbdb:debug/copy
 
 # test
 execute store result score $size rx.temp if data storage rx:debug listdb.entries[]
-execute if score $size rx.temp matches 3 run scoreboard players add $success.add rx.test 1
+execute if score $size rx.temp matches 3 
+# run scoreboard players add $success.add rx.test 1
 execute unless score $size rx.temp matches 3 run scoreboard players add $failure.add rx.test 1

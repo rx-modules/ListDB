@@ -1,16 +1,15 @@
 # 25 Oct 20
 
-from datetime import datetime
 import math
 
-BASE = 2
+BASE = 64
 MAX_INT = 2**31-1
-DEBUG = True
+DEBUG = False
 
 
 COMMENT = (
     '# By: rx97\n'
-    f"# Generated on: {datetime.now().strftime(r'%d %b %y')}\n\n"
+#    f"# Generated on: {datetime.now().strftime(r'%d %b %y')}\n\n"
 )
 
 lines = (
