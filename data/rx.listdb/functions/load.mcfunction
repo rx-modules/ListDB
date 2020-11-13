@@ -1,26 +1,16 @@
 # By: rx97
-# 23 Oct 20
+# 12 Nov 20
 # 
-#> Creates Objs. Called from #load:load
+#> Checks version #load:load
 
+#define entity @s
 #define storage rx:global
+#define storage rx:temp
+#define storage rx:info
 #define storage rx:io
 
+#> Info!
+data modify storage rx:info listdb.name set value 'ListDB'
+data modify storage rx:info listdb.pretty_name set value '[{"text":"L","color":"#8ec53c"},{"text":"i","color":"#76c447"},{"text":"s","color":"#5ec352"},{"text":"t","color":"#46c25e"},{"text":"D","color":"#2ec169"},{"text":"B","color":"#17c175"}]'
 
-# Lantern Load
-scoreboard players set ListDB load 1
-
-scoreboard objectives add rx.int dummy
-scoreboard objectives add rx.temp dummy
-scoreboard objectives add rx.io dummy
-
-scoreboard players set $2 rx.int 2
-scoreboard players set $3 rx.int 3
-scoreboard players set $16 rx.int 16
-scoreboard players set $19 rx.int 19
-scoreboard players set $64 rx.int 64
-scoreboard players set $256 rx.int 256
-
-tellraw @a[tag=rx.admin] {"text":"ListDB Loaded"}
-
-# schedule function rx.listdb:tick 1t replace
+function rx.listdb:init
