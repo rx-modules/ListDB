@@ -5,7 +5,7 @@
 #> input:
 #>   index (score):       rx.io $in.idx
 #>   list (storage):      rx.io listdb.list_name (string)
-#>   /data modify storage rx:io listdb.entries[{list:'<list name>'}].search set value 1b
+#>   /data modify storage rx:global listdb.entries[{list:'<list name>'}].search set value 1b
 #> output:
 #>   success (score):     rx.io $success 0/1     (boolean)
 

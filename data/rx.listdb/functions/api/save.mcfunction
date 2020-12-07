@@ -4,8 +4,7 @@
 #> Saves the entry to ListDB
 #> input:
 #>   index (score):   rx.io $in.idx
-#>   data (storage):  rx.io listdb.entry       (nbt)
-#>   /data modify storage rx:io listdb.entries[{list:'<list name>'}].search set value 1b
+#>   /data modify storage rx:global listdb.entries[{list:'<list name>'}].search set value 1b
 #> output:
 #>   success (score): rx.io $success 0/1       (boolean)
 #>   data saved to rx:global listdb.entries
