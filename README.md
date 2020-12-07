@@ -1,5 +1,5 @@
 # ListDB
-An arbitrary NBT list database to use w/ Minecraft datapacks. This datapack is in heavy development. If you are interested in the latest happenings with this project, please join my (discord)[https://discord.gg/u5Xfxw8y9n].
+An arbitrary NBT list database to use w/ Minecraft datapacks. This datapack is in heavy development. If you are interested in the latest happenings with this project, please join my [discord](https://discord.gg/u5Xfxw8y9n).
 
 ## What is this?
 This datapack utilizes the method from [PlayerDB](https://github.com/rx-modules/PlayerDB) to allow for efficient nbt lists with O(log(n)) score access (actually, that's worse case, but average case is much better).
