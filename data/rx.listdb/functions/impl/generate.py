@@ -33,11 +33,11 @@ def make_file(path, content):
 def gen_bit(bit_num):
     bit = (
         'data modify storage rx:global listdb.entries[].bits.select set value 0b\n'
-        'scoreboard players operation $bit rx.temp = $uid rx.temp\n'
+        'scoreboard players operation $bit rx.temp = $idx rx.temp\n'
         f'scoreboard players operation $bit rx.temp %= ${BASE} rx.int\n'
         'scoreboard players set $size rx.temp 0\n'
         f'function rx.listdb:impl/select/bit{bit_num}/0_{BASE-1}\n'
-        f'scoreboard players operation $uid rx.temp /= ${BASE} rx.int\n'
+        f'scoreboard players operation $idx rx.temp /= ${BASE} rx.int\n'
         'data modify storage rx:global listdb.entries[{bits:{select:0b}}].selected set value 0b\n'
         # 'execute store result score $size rx.temp if data storage rx:global listdb.entries[{selected:1b}]\n'  # noqa: E501
         f'execute if score $size rx.temp matches 2.. run function rx.listdb:impl/select/bit{bit_num+1}\n'  # noqa: E501
